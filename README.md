@@ -18,9 +18,12 @@ Install-Module -Name Get-ChildItemColor
 ```
 * [PSReadLine](https://www.powershellgallery.com/packages/PSReadLine/2.0.0-beta3)
 ```
-Install-Module -Name PSReadLine -AllowPrerelease
+Install-Module -Name PSReadLine
 ```
-
+* [Posh-Git](https://github.com/dahlbyk/posh-git)
+```
+PowerShellGet\Install-Module posh-git
+```
 * [Fzf](https://github.com/junegunn/fzf) 
 
 * [Chocolatey](https://chocolatey.org/)
