@@ -56,3 +56,10 @@ Set-PSReadlineKeyHandler -Key Tab -Function MenuComplete
 
 Remove-PSReadlineKeyHandler 'Ctrl+t','Ctrl+r'
 Import-Module PSFzf -ArgumentList 'Ctrl+t','Ctrl+r'
+
+function Switch-User
+{
+    param($Process="powershell.exe")
+    $cred = Get-Credential
+    Start-Process $Process -Credential $cred  -LoadUserProfile
+}
