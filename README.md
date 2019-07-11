@@ -24,10 +24,11 @@ Install-Module -Name PSReadLine
 ```
 PowerShellGet\Install-Module posh-git
 ```
-* [Fzf](https://github.com/junegunn/fzf)
-
 * [Chocolatey](https://chocolatey.org/)
-
+```
+Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+```
+* [Fzf](https://github.com/junegunn/fzf)
 ```
 choco install fzf
 ```
