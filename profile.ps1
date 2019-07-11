@@ -12,10 +12,10 @@ function prompt {
         Write-Host "(Elevated) " -NoNewline -ForegroundColor DarkGray
     }
 
-    Write-Host "# " -NoNewline -ForegroundColor DarkYellow
-    Write-Host "$env:USERNAME" -NoNewline -ForegroundColor DarkYellow
-    Write-Host "@" -NoNewline -ForegroundColor DarkCyan
-    Write-Host "$env:COMPUTERNAME" -NoNewline -ForegroundColor Red
+    Write-Host "# " -NoNewline -ForegroundColor black
+    Write-Host "$env:USERNAME" -NoNewline -ForegroundColor DarkBlue
+    Write-Host "@" -NoNewline -ForegroundColor black
+    Write-Host "$env:COMPUTERNAME" -NoNewline -ForegroundColor Yellow
     Write-Host " : " -NoNewline -ForegroundColor DarkGray
 
     $curPath = $ExecutionContext.SessionState.Path.CurrentLocation.Path
@@ -24,18 +24,17 @@ function prompt {
         $curPath = "~" + $curPath.SubString($Home.Length)
     }
 
-    Write-Host $curPath -NoNewline -ForegroundColor Yellow
+    Write-Host $curPath -NoNewline -ForegroundColor DarkYellow
     Write-Host " : " -NoNewline -ForegroundColor DarkGray
-    Write-Host (Get-Date -Format G) -NoNewline -ForegroundColor Green
-    Write-Host " : " -NoNewline -ForegroundColor DarkGray
+    Write-Host (Get-Date -Format G) -NoNewline -ForegroundColor Cyan
     $LastExitCode = $origLastExitCode
-    "`n$('>' * ($nestedPromptLevel + 1)) "
+    "`n$(' >' * ($nestedPromptLevel + 1)) "
 }
 
 Import-Module posh-git
 
-$global:GitPromptSettings.BeforeText = '['
-$global:GitPromptSettings.AfterText  = '] '
+$GitPromptSettings.BeforeStatus = ' [ git:'
+$GitPromptSettings.AfterStatus = " ] `n > "
 
 Import-Module Get-ChildItemColor
 
@@ -55,12 +54,5 @@ Set-PSReadlineKeyHandler -Key DownArrow -Function HistorySearchForward
 Set-PSReadlineKeyHandler -Chord 'Shift+Tab' -Function Complete
 Set-PSReadlineKeyHandler -Key Tab -Function MenuComplete
 
-Function h+
-{
-    Get-History |
-        Out-GridView -Title "Command History - press CTRL to select multiple - Selected commands copied to clipboard" -OutputMode Multiple |
-        ForEach-Object -Begin { [Text.StringBuilder]$sb = ""} -Process { $null = $sb.AppendLine($_.CommandLine) } -End { $sb.ToString() | clip }
-}
-
-Remove-PSReadlineKeyHandler 'Ctrl+T','Ctrl+R'
-Import-Module PSFzf -ArgumentList 'Ctrl+T','Ctrl+R'
+Remove-PSReadlineKeyHandler 'Ctrl+t','Ctrl+r'
+Import-Module PSFzf -ArgumentList 'Ctrl+t','Ctrl+r'
