@@ -24,17 +24,10 @@ Install-Module -Name PSReadLine
 ```
 PowerShellGet\Install-Module posh-git
 ```
-* [Fzf](https://github.com/junegunn/fzf) 
+* [Fzf](https://github.com/junegunn/fzf)
 
 * [Chocolatey](https://chocolatey.org/)
 
 ```
 choco install fzf
 ```
-
-截图
-
-![1.png](1.png)
-![2.png](2.png)
-![3.png](3.png)
-![4.png](4.png)
