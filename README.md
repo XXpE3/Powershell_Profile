@@ -1,34 +1,31 @@
-特性
-
-* Emacs 键位配置
-* Git 状态显示
-* 目录文件彩色输出
-* 历史命令与文件快速搜索
-* 图形化历史命令记录
-
-组件
-
-* [PSFzf](https://www.powershellgallery.com/packages/PSFzf/1.1.19)
+* [Oh-My-Posh](https://www.powershellgallery.com/packages/oh-my-posh)
 ```
-Install-Module -Name PSFzf
+Install-Module oh-my-posh -Scope CurrentUser -AllowPrerelease
 ```
-* [Get-ChildItemColor](https://www.powershellgallery.com/packages/Get-ChildItemColor/1.2.3)
+* [PSFzf](https://www.powershellgallery.com/packages/PSFzf)
 ```
-Install-Module -Name Get-ChildItemColor
+Install-Module PSFzf -Scope CurrentUser -AllowPrerelease
 ```
-* [PSReadLine](https://www.powershellgallery.com/packages/PSReadLine/2.0.0-beta3)
+* [Get-ChildItemColor](https://www.powershellgallery.com/packages/Get-ChildItemColor)
 ```
-Install-Module -Name PSReadLine
+Install-Module Get-ChildItemColor -Scope CurrentUser -AllowPrerelease
 ```
+* [PSReadLine](https://www.powershellgallery.com/packages/PSReadLine)
+```
+Install-Module PSReadLine -Scope CurrentUser -AllowPrerelease
+``` 
 * [Posh-Git](https://github.com/dahlbyk/posh-git)
 ```
-PowerShellGet\Install-Module posh-git
+Install-Module Posh-Git -Scope CurrentUser -AllowPrerelease
 ```
-* [Chocolatey](https://chocolatey.org/)
+* [Scoop](https://scoop.sh)
 ```
-Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+Invoke-Expression (New-Object System.Net.WebClient).DownloadString('https://get.scoop.sh')
 ```
 * [Fzf](https://github.com/junegunn/fzf)
+* [Z.lua](https://github.com/skywind3000/z.lua)
 ```
-choco install fzf
+scoop install fzf
+scoop install lua
+scoop install z.lua
 ```
