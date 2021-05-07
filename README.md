@@ -50,6 +50,8 @@ scoop install z.lua
 | ESC       | 进入 Vi 模式      | Vi                    |
 | 上箭头    | 向上翻阅历史命令  | HistorySearchBackward |
 | 下箭头    | 向下翻阅历史命令  | HistorySearchForward  |
+| Ctrl+p    | 向上翻阅历史命令  | HistorySearchBackward |
+| Ctrl+n    | 向下翻阅历史命令  | HistorySearchForward  |
 | Ctrl+a    | 跳转到行首        | BeginningOfLine       |
 | Ctrl+e    | 跳转到行尾        | EndOfLine             |
 | Ctrl+f    | 光标向前移动 1 格 | ForwardChar           |
@@ -58,3 +60,9 @@ scoop install z.lua
 | Alt+b     | 跳转到上个单词    | BackwardWord          |
 | Tab       | 补全              | Complete              |
 | Shift+Tab | 弹出补全选择列表  | MenuComplete          |
+
+## 查看所有快捷键
+
+```powershell
+Get-PSReadLineKeyHandler
+```

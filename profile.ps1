@@ -17,6 +17,8 @@ Set-PSReadLineOption -MaximumHistoryCount 5120
 Set-PSReadLineOption -PredictionSource History
 Set-PSReadlineKeyHandler -Key UpArrow -Function HistorySearchBackward
 Set-PSReadlineKeyHandler -Key DownArrow -Function HistorySearchForward
+Set-PSReadlineKeyHandler -Key 'Ctrl+p' -Function HistorySearchBackward
+Set-PSReadlineKeyHandler -Key 'Ctrl+n' -Function HistorySearchForward
 Set-PSReadlineKeyHandler -Key 'Ctrl+a' -Function BeginningOfLine
 Set-PSReadlineKeyHandler -Key 'Ctrl+e' -Function EndOfLine
 Set-PSReadlineKeyHandler -key 'Ctrl+f' -Function ForwardChar
