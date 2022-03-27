@@ -38,4 +38,4 @@ function Switch-User
     Start-Process $Process -Credential $cred  -LoadUserProfile
 }
 
-Invoke-Expression (& { (lua C:\Users\$env:UserName\scoop\apps\z.lua\1.8.12\z.lua --init powershell) -join "`n" })
+Invoke-Expression (& { (lua C:\Users\$env:UserName\scoop\apps\z.lua\current\z.lua --init powershell) -join "`n" })
