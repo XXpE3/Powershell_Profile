@@ -39,3 +39,4 @@ function Switch-User
 }
 
 Invoke-Expression (& { (lua C:\Users\$env:UserName\scoop\apps\z.lua\current\z.lua --init powershell) -join "`n" })
+
