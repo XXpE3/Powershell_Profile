@@ -7,10 +7,6 @@
 * [https://github.com/PowerShell/PowerShell/releases](https://github.com/PowerShell/PowerShell/releases)
 
 ## 安装组件
-* [Oh-My-Posh](https://www.powershellgallery.com/packages/oh-my-posh)
-```powershell
-Install-Module oh-my-posh -Scope CurrentUser -AllowPrerelease
-```
 * [PSFzf](https://www.powershellgallery.com/packages/PSFzf)
 ```powershell
 Install-Module PSFzf -Scope CurrentUser -AllowPrerelease
@@ -22,7 +18,7 @@ Install-Module Get-ChildItemColor -Scope CurrentUser -AllowPrerelease -AllowClob
 * [PSReadLine](https://www.powershellgallery.com/packages/PSReadLine)
 ```powershell
 Install-Module PSReadLine -Scope CurrentUser -AllowPrerelease -Force
-``` 
+```
 * [Posh-Git](https://github.com/dahlbyk/posh-git)
 ```powershell
 Install-Module Posh-Git -Scope CurrentUser -AllowPrerelease
@@ -31,10 +27,12 @@ Install-Module Posh-Git -Scope CurrentUser -AllowPrerelease
 ```powershell
 Invoke-Expression (New-Object System.Net.WebClient).DownloadString('https://get.scoop.sh')
 ```
+* [Oh My Posh](https://ohmyposh.dev)
 * [Git](https://git-scm.com)
 * [Fzf](https://github.com/junegunn/fzf)
 * [Z.lua](https://github.com/skywind3000/z.lua)
 ```powershell
+scoop install https://github.com/JanDeDobbeleer/oh-my-posh/releases/latest/download/oh-my-posh.json
 scoop install git
 scoop install fzf
 scoop install lua

@@ -1,6 +1,5 @@
 Import-Module posh-git
-Import-Module oh-my-posh
-Set-PoshPrompt emodipt
+oh-my-posh init pwsh --config .1_shell_light.omp.json | Invoke-Expression
 
 Import-Module Get-ChildItemColor
 
@@ -39,4 +38,3 @@ function Switch-User
 }
 
 Invoke-Expression (& { (lua C:\Users\$env:UserName\scoop\apps\z.lua\current\z.lua --init powershell) -join "`n" })
-
