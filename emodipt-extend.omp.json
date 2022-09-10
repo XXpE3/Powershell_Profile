@@ -54,14 +54,14 @@
           {
             "type": "exit",
             "style": "plain",
-            "foreground": "#b8ff75",
+            "foreground": "#859900",
             "foreground_templates": [
               "{{ if gt .Code 0 }}#E06C75{{ end }}"
             ],
             "template": " x{{ .Meaning }}"
           },
           {
-            "foreground": "#b8ff75",
+            "foreground": "#859900",
             "foreground_templates": [
               "{{ if gt .Code 0 }}#E06C75{{ end }}"
             ],
